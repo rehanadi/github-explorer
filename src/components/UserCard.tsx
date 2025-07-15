@@ -38,7 +38,7 @@ function UserCard({ user }: Props) {
         <span>{expanded ? '▲' : '▼'}</span>
       </div>
       {expanded && (
-        <div className="mt-2">
+        <div className="mt-4">
           {repos.map((repo, idx) => (
             <RepoCard
               key={repo.id}

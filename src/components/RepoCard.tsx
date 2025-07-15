@@ -10,7 +10,7 @@ const RepoCard = React.forwardRef<HTMLDivElement, Props>(({ repo }, ref) => (
       <strong>{repo.name}</strong>
       <span>⭐ {repo.stargazers_count}</span>
     </div>
-    <p className="text-sm text-gray-600">{repo.description}</p>
+    <p className="text-sm text-gray-600 mt-2">{repo.description}</p>
   </div>
 ));
 
