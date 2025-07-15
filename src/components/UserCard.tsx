@@ -32,7 +32,7 @@ function UserCard({ user }: Props) {
   };
 
   return (
-    <div className="border p-3 mb-2">
+    <div className="border border-gray-300 rounded-md p-3 mb-2">
       <div className="flex justify-between items-center cursor-pointer" onClick={handleToggle}>
         <span>{user.login}</span>
         <span>{expanded ? '▲' : '▼'}</span>
@@ -40,7 +40,11 @@ function UserCard({ user }: Props) {
       {expanded && (
         <div className="mt-2">
           {repos.map((repo, idx) => (
-            <RepoCard key={repo.id} repo={repo} ref={idx === repos.length - 1 ? lastRepoRef : null} />
+            <RepoCard
+              key={repo.id}
+              repo={repo}
+              ref={idx === repos.length - 1 ? lastRepoRef : null}
+            />
           ))}
         </div>
       )}

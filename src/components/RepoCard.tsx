@@ -5,7 +5,7 @@ interface Props {
 }
 
 const RepoCard = React.forwardRef<HTMLDivElement, Props>(({ repo }, ref) => (
-  <div ref={ref} className="border p-2 mb-2">
+  <div ref={ref} className="border border-gray-300 rounded-md p-2 mb-2">
     <div className="flex justify-between">
       <strong>{repo.name}</strong>
       <span>⭐ {repo.stargazers_count}</span>
