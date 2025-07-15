@@ -25,13 +25,12 @@ function Home() {
       setUsers(res.data.items);
     } catch (err) {
       console.error(err);
-      setError('Failed to fetch users. Please try again.');
+      setError('Something went wrong. Please try again.');
       setUsers([]);
     }
     setIsLoading(false);
   };
 
-  // ✅ debounce the search function
   useEffect(() => {
     const debounced = debounce(() => {
       handleSearch(searchQuery);

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { getUserRepos } from '../services/api';
 import RepoCard from './RepoCard';
 import { useInfiniteScroll } from '../utils/observer';
+import { FiChevronUp } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 
 interface Props {
   user: any;
@@ -35,7 +37,7 @@ function UserCard({ user }: Props) {
     <div className="border border-gray-300 rounded-md p-3 mb-2">
       <div className="flex justify-between items-center cursor-pointer" onClick={handleToggle}>
         <span>{user.login}</span>
-        <span>{expanded ? '▲' : '▼'}</span>
+        <span>{expanded ? <FiChevronUp /> : <FiChevronDown />}</span>
       </div>
       {expanded && (
         <div className="mt-4">
